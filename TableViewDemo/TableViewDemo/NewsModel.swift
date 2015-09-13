@@ -15,7 +15,7 @@ import Foundation
 /// - Email: huangyibiao520@163.com
 /// - Github: https://github.com/632840804/
 /// - 微博：JackyHuang标哥
-class NewsModel: AnyObject {
+class NewsModel: NSObject {
   /// The news' title
   var title = ""
   
