@@ -14,3 +14,8 @@ The demos of learning-swift2.0.
 /// - 微博：JackyHuang标哥
 /// - QQ群：324400294
 ```
+
+##关于SnapKit自动布局
+![image](https://github.com/632840804/Swift2Demos/blob/master/SnapKitAutoLayoutDemo/snapshot.gif)
+
+详细请参考：http://www.hybblog.com/swift2-autolayout/
