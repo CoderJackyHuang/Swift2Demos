@@ -40,7 +40,8 @@ class ViewController: UIViewController {
     scrollView.addSubview(scrollToBottomButton)
     scrollToBottomButton.snp_makeConstraints { (make) -> Void in
       make.left.equalTo(10)
-      // 注意不能使right=-10，因为对于ScrollView来说，right是无边际的，此时参考self.view的
+      // 注意不能使right=-10，因为对于ScrollView来说，
+      // right是无边际的，此时参考self.view的
       make.right.equalTo(self.view.snp_right).offset(-10)
       //      make.right.equalTo(-10)
       make.top.equalTo(10)
@@ -60,39 +61,39 @@ class ViewController: UIViewController {
       make.height.equalTo(60)
     }
     
-    // 将三个Label水平平分
-    let label1 = UILabel()
-    label1.text = "标题1"
-    label1.backgroundColor = UIColor.greenColor()
-    scrollView.addSubview(label1)
-    
-    let label2 = UILabel()
-    label2.text = "标题2"
-    label2.backgroundColor = UIColor.yellowColor()
-    scrollView.addSubview(label2)
-    
-    let label3 = UILabel()
-    label3.text = "标题3"
-    label3.backgroundColor = UIColor.blueColor()
-    scrollView.addSubview(label3)
-    
-    // 间隔都为10
-    label1.snp_makeConstraints { (make) -> Void in
-      make.left.equalTo(10)
-      make.width.equalTo((screenWidth - 40) / 3 )
-      make.top.equalTo(centerView.snp_bottom).offset(30)
-      make.height.equalTo(40)
-    }
-    
-    label2.snp_makeConstraints { (make) -> Void in
-      make.width.top.height.equalTo(label1)
-      make.left.equalTo(label1.snp_right).offset(10)
-    }
-    
-    label3.snp_makeConstraints { (make) -> Void in
-      make.width.top.height.equalTo(label1)
-      make.left.equalTo(label2.snp_right).offset(10)
-    }
+  // 将三个Label水平平分
+  let label1 = UILabel()
+  label1.text = "标题1"
+  label1.backgroundColor = UIColor.greenColor()
+  scrollView.addSubview(label1)
+  
+  let label2 = UILabel()
+  label2.text = "标题2"
+  label2.backgroundColor = UIColor.yellowColor()
+  scrollView.addSubview(label2)
+  
+  let label3 = UILabel()
+  label3.text = "标题3"
+  label3.backgroundColor = UIColor.blueColor()
+  scrollView.addSubview(label3)
+  
+  // 间隔都为10
+  label1.snp_makeConstraints { (make) -> Void in
+    make.left.equalTo(10)
+    make.width.equalTo((screenWidth - 40) / 3 )
+    make.top.equalTo(centerView.snp_bottom).offset(30)
+    make.height.equalTo(40)
+  }
+  
+  label2.snp_makeConstraints { (make) -> Void in
+    make.width.top.height.equalTo(label1)
+    make.left.equalTo(label1.snp_right).offset(10)
+  }
+  
+  label3.snp_makeConstraints { (make) -> Void in
+    make.width.top.height.equalTo(label1)
+    make.left.equalTo(label2.snp_right).offset(10)
+  }
     
     // 看看通过循环创建
     var preLabel: UILabel?
@@ -136,25 +137,25 @@ class ViewController: UIViewController {
     scrollToTopButton.addTarget(self, action: "onScrollToTopButtonHandler:",
       forControlEvents: UIControlEvents.TouchUpInside)
     
-    // 到最后一项的时候，需要让ScrollView的contentSize随内容而变化
-    scrollView.snp_updateConstraints(closure: { (make) -> Void in
-      make.bottom.equalTo(scrollToTopButton.snp_bottom).offset(30)
-    })
+// 到最后一项的时候，需要让ScrollView的contentSize随内容而变化
+scrollView.snp_updateConstraints(closure: { (make) -> Void in
+  make.bottom.equalTo(scrollToTopButton.snp_bottom).offset(30)
+})
   }
   
   // MARK: Button Event Handlers
   func onScrollToBottomButtonHandler(sender: UIButton) {
-    UIView.animateWithDuration(0.4) { () -> Void in
-      self.scrollView.setContentOffset(
-        CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.frame.height),
-        animated: true)
-    }
+UIView.animateWithDuration(0.4) { () -> Void in
+  self.scrollView.setContentOffset(
+    CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.frame.height),
+    animated: true)
+}
   }
   
   func onScrollToTopButtonHandler(sender: UIButton) {
-    UIView.animateWithDuration(0.4) { () -> Void in
-      self.scrollView.setContentOffset(CGPointMake(0, -64), animated: true)
-    }
+UIView.animateWithDuration(0.4) { () -> Void in
+  self.scrollView.setContentOffset(CGPointMake(0, -64), animated: true)
+}
   }
 
   
