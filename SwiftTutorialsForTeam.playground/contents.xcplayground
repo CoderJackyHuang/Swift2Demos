@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' auto-termination-delay='57' requires-full-environment='true'>
+    <pages>
+        <page name='Introduce'/>
+        <page name='Chapter1-Base'/>
+        <page name='Chapter2-String'/>
+        <page name='Chapter3-Collection'/>
+        <page name='Chapter4-ControlFlow'/>
+        <page name='Chapter5-Function'/>
+        <page name='Chapter6-Closure'/>
+        <page name='Chapter7-Enumaration'/>
+        <page name='Chapter8-Structure'/>
+        <page name='Chapter9-Class'/>
+        <page name='Chapter10-StorageManager'/>
+        <page name='Chapter16-Singleton'/>
+        <page name='Chapter11-Exception'/>
+        <page name='Chapter12-Extension'/>
+        <page name='Chapter13-Protocol'/>
+        <page name='Chapter14-Access'/>
+        <page name='Chapter15-General'/>
+    </pages>
+</playground>

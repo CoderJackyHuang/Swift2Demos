@@ -8,5 +8,6 @@
         <page name='Control-flows'/>
         <page name='Closure'/>
         <page name='Enum'/>
+        <page name='SwiftTutorials'/>
     </pages>
 </playground>

@@ -29,6 +29,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    let bicycle = Bicycle(passengers: 2, wheels: 2, constant: 2)
+    bicycle.showDescription()
+    
+    print(bicycle.passengers)
+    print(bicycle.wheels)
+
+    
     /// 构造数据，先创建空数组
     self.dataSource = [NewsModel]()
     for var i = 0; i < 10; ++i {
