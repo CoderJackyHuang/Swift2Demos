@@ -10,7 +10,7 @@ The demos of learning-swift2.0.
 /// - Note:
 /// - Blog: http://www.hybblog.com/
 /// - Email: huangyibiao520@163.com
-/// - Github: https://github.com/632840804/
+/// - Github: https://github.com/CoderJackyHuang/
 /// - 微博：JackyHuang标哥
 /// - QQ群：324400294
 ```
